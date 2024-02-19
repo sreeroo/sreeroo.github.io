@@ -1,0 +1,94 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000; /* Black background color */
+    color: #ffffff; /* Light text color */
+    padding: 20px;
+    margin: 0;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.prompt {
+    color: #FF0000; /* Red prompt color */
+    font-weight: bold; /* Make the prompt bold */
+}
+
+.prompt::after {
+    content: '|'; /* This is the cursor */
+    animation: blink 1s step-end infinite; /* This makes the cursor blink */
+}
+
+.command {
+    color: #ffffff; /* White command color */
+    font-family: 'Courier New', Courier, monospace; /* Use a monospace font for the command */
+}
+
+.output {
+    color: #00ff00; /* Green output color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.ascii-art-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#ascii-art-container-1,
+#ascii-art-container-2 {
+    white-space: pre;
+}
+
+.ascii-container {
+    display: flex;
+    justify-content: flex-start; /* Center the ASCII arts horizontally */
+    align-items: center; /* Center the ASCII arts vertically */
+    flex-wrap: wrap; /* Wrap the ASCII arts if they don't fit on one line */
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.ascii-art {
+width: 30%;
+color: white; /* Green ASCII art color */
+font-size: 0.8vw; /* Adjust as needed */
+animation: fadeIn 2s ease-in-out;
+transition: color 0.5s ease-in-out; /* Add a transition effect */
+}
+
+.ascii-art:hover {
+    color: #00ff00; /* Change the color to red when the ASCII art is hovered over */
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+    .ascii-art {
+        font-size: 0.8vw; /* Adjust as needed */
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .ascii-art {
+        font-size: 0.8vw; /* Adjust as needed */
+    }
+}
+
+/* For desktop and laptop screens: */
+@media only screen and (min-width: 1025px) {
+    .ascii-art {
+        font-size: 0.8vw; /* Adjust as needed */
+    }
+}

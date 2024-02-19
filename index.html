@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio (Terminal)</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal-emulator@1.2.0/js/jquery.terminal-emulator.min.js"></script>
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SREE</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="terminal"></div>
+  <div class="ascii-art-container">
+    <div id="ascii-art-container-1"></div>
+    <div id="ascii-art-container-2"></div>
+</div>
+        <p class="heading">Welcome to my interactive personal terminal website</p>
+    </div>
+
+    <div id="terminal">
+        <div class="prompt">root@mywebsite$&nbsp;</div>
+        <div class="command" contenteditable="true" spellcheck="false"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="animate.js"></script>
 </body>
 </html>
