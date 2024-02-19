@@ -4,10 +4,65 @@ var command = document.getElementById("typer");
 var textarea = document.getElementById("texter");
 
 setTimeout(function () {
-    loopLines(banner, "", 80);
-    textarea.focus();
+    loopLines(banner, "", 130);
   }, 100);
 
+
+  window.onload = function() {
+    const commandInput = document.getElementById('command-input');
+    const terminal = document.getElementById('terminal');
+    const prompt = document.getElementById('prompt');
+
+    // Function to handle user input
+    function handleUserInput() {
+        // Get the user input from the command input element
+        const userInput = commandInput.textContent.trim();
+
+        // Check if the user input is not empty
+        if (userInput !== '') {
+            // Create a new paragraph element to display the command
+            const commandOutput = document.createElement('p');
+            commandOutput.textContent = `${prompt.textContent} ${userInput}`;
+            commandOutput.classList.add('command');
+
+            // Append the command output to the terminal
+            terminal.appendChild(commandOutput);
+
+            // Clear the command input after processing
+            commandInput.textContent = '';
+
+            // Generate a new prompt
+            generatePrompt();
+        }
+    }
+
+    // Function to generate a new prompt
+    function generatePrompt() {
+        // Create a new prompt element
+        const newPrompt = document.createElement('span');
+        newPrompt.id = 'prompt';
+        prompt.style.display = 'inline-block';
+        newPrompt.textContent = '> ';
+
+
+        // Append the new prompt to the terminal
+        terminal.appendChild(newPrompt);
+
+        // Set focus to the command input for user convenience
+        commandInput.focus();
+    }
+
+    // Event listener for handling Enter key press
+    commandInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            handleUserInput();
+        }
+    });
+
+    // Delay generating the prompt until after the ASCII art banners are displayed
+    setTimeout(generatePrompt, 2000); // Adjust the delay as needed (in milliseconds)
+};
 
 
   function addLine(text, style, time) {

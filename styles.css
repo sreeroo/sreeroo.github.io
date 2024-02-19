@@ -12,30 +12,10 @@ body {
     100% {opacity: 1;}
 }
 
-.prompt {
-    color: #FF0000; /* Red prompt color */
-    font-weight: bold; /* Make the prompt bold */
-}
-
-.prompt::after {
-    content: '|'; /* This is the cursor */
-    animation: blink 1s step-end infinite; /* This makes the cursor blink */
-}
-
 .command {
     color: #ffffff; /* White command color */
     font-family: 'Courier New', Courier, monospace; /* Use a monospace font for the command */
-}
-
-.output {
-    color: #00ff00; /* Green output color */
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
+    caret-color: transparent; /* Hide the cursor */
 }
 
 .ascii-container {
@@ -50,12 +30,7 @@ body {
     100% {opacity: 1;}
 }
 
-/* Textarea styles */
-textarea {
-    left: -1000px;
-    position: absolute;
-  }
-  
+
 .ascii-art {
 width: 30%;
 color: white; /* White text color */
@@ -123,34 +98,22 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     outline: 0;
   }
 
-   /* Command and liner styles */
-   #command {
-    cursor: text;
-    height: 50px;
-    color: greenyellow;
-  }
-  #liner {
+  #prompt {
+    display: none;
+}
+
+  #prompt {
     line-height: 1.3em;
     margin-top: 0px;
     animation: show 1s ease forwards;
     animation-delay: 1.2s;
-    opacity: 0;
+    opacity: 100;
+    color: #FF0000;
+    margin-right: 5px;
+
   }
-  #liner::before {
-    color: red;
-    content: "guest@sree:~$";
-  }
-  #liner.password::before {
-    content: "Password:";
-  }
-  @keyframes show {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+
+
 
   /* Paragraph styles */
   p {
@@ -177,4 +140,42 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
       width: 100%;
     }
   }
-  
+
+  #command-line {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    
+}
+
+
+
+#input-container {
+    display: flex;
+    align-items: center;
+}
+
+
+#command-input {
+    display: inline-block;
+    min-width: 20px;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#command-input:empty::before {
+    content: '\200B'; /* Zero-width space to ensure div is never empty */
+}
+
+#command-input::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+    animation: blink 1s infinite;
+}
