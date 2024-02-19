@@ -38,16 +38,6 @@ body {
     height: 100vh; /* Full height of the viewport */
 }
 
-.ascii-art-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-#ascii-art-container-1,
-#ascii-art-container-2 {
-    white-space: pre;
-}
-
 .ascii-container {
     display: flex;
     justify-content: flex-start; /* Center the ASCII arts horizontally */
@@ -60,6 +50,12 @@ body {
     100% {opacity: 1;}
 }
 
+/* Textarea styles */
+textarea {
+    left: -1000px;
+    position: absolute;
+  }
+  
 .ascii-art {
 width: 30%;
 color: white; /* Green ASCII art color */
@@ -92,3 +88,93 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
         font-size: 0.8vw; /* Adjust as needed */
     }
 }
+
+ /* Index, color2, command, error, and white styles */
+ .index {
+    color: #DCDCCC;
+  }
+  .color2 {
+    color: #00FFFF;
+  }
+  .command {
+    color: #00ff80;
+    text-shadow: 0 0 4px #fc8f00; 
+  }
+  .error {
+    color: #B89076;
+  }
+  .white {
+    color: #fff;
+  }
+  
+  /* Inherit, a, a:hover, and a:focus styles */
+  .inherit,
+  a {
+    color: #e87575;
+  }
+  a {
+    text-decoration: inherit;
+  }
+  a:hover {
+    background: #73ABAD;
+    color: #211830;
+  }
+  a:focus {
+    outline: 0;
+  }
+
+   /* Command and liner styles */
+   #command {
+    cursor: text;
+    height: 50px;
+    color: #73ABAD;
+  }
+  #liner {
+    line-height: 1.3em;
+    margin-top: 0px;
+    animation: show 0.5s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+  }
+  #liner::before {
+    color: #FFFF00;
+    content: "rajanagori@about-me:~$";
+  }
+  #liner.password::before {
+    content: "Password:";
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Paragraph styles */
+  p {
+    display: block;
+    line-height: 1.3em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.05em;
+    animation: typing 0.5s steps(30, end);
+  }
+  .no-animation {
+    animation: typing 0 steps(30, end);
+  }
+  .margin {
+    margin-left: 0px;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  

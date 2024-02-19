@@ -1,33 +1,43 @@
-const terminal = document.getElementById('terminal');
-const commandLine = terminal.querySelector('.command');
+var before = document.getElementById("before");
+var liner = document.getElementById("liner");
+var command = document.getElementById("typer");
+var textarea = document.getElementById("texter");
 
-commandLine.focus();
+setTimeout(function () {
+    loopLines(banner, "", 80);
+    textarea.focus();
+  }, 100);
 
-
-commandLine.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-        const command = commandLine.innerText.trim();
-        const output = executeCommand(command);
-        const outputElement = document.createElement('div');
-        outputElement.classList.add('output');
-        outputElement.textContent = output;
-        terminal.appendChild(outputElement);
-
-        const newPrompt = document.createElement('div');
-        newPrompt.classList.add('prompt');
-        newPrompt.textContent = '$ ';
-        terminal.appendChild(newPrompt);
-
-        const newCommandLine = document.createElement('div');
-        newCommandLine.classList.add('command');
-        newCommandLine.contentEditable = true;
-        newCommandLine.spellcheck = false;
-        terminal.appendChild(newCommandLine);
-
-        newCommandLine.focus();
-
-        terminal.scrollTop = terminal.scrollHeight;
-
-        e.preventDefault();
+  function addLine(text, style, time) {
+    var t = "";
+    for (let i = 0; i < text.length; i++) {
+      if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
+        t += "&nbsp;&nbsp;";
+        i++;
+      } else {
+        t += text.charAt(i);
+      }
     }
-});
+    setTimeout(function () {
+      var next = document.createElement("p");
+      next.innerHTML = t;
+      next.className = style;
+  
+      before.parentNode.insertBefore(next, before);
+  
+      window.scrollTo(0, document.body.offsetHeight);
+    }, time);
+  }
+
+  function loopLines(name, style, time) {
+    name.forEach(function (item, index) {
+      addLine(item, style, index * time);
+    });
+  }
+ 
+ banner = [
+    "+-+-+-+-+ +-+-+",
+    "|W|E|L|C|O|M|E|",
+    "+-+-+-+-+ +-+-+",
+    "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
+  ];

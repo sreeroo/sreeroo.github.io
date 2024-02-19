@@ -7,18 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ascii-art-container">
-    <div id="ascii-art-container-1"></div>
-    <div id="ascii-art-container-2"></div>
-</div>
-        <p class="heading">Welcome to my interactive personal terminal website</p>
-    </div>
 
-    <div id="terminal">
-        <div class="prompt">root@mywebsite$&nbsp;</div>
-        <div class="command" contenteditable="true" spellcheck="false"></div>
+    <div class="ascii-container">
+        <div class="ascii-art">
+            <pre>                                                                   
+                        .,,uod8B8bou,,.
+                ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+           ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+           !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+           !.......:!?|||||!!^^""'            ||||
+           !.........||||                     ||||
+           !.........||||  C:/                ||||
+           !.........||||                     ||||
+           !.........||||                     ||||
+           !.........||||                     ||||
+           !.........||||                     ||||
+           `.........||||                    ,||||
+            .;.......||||               _.-!!|||||
+     .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+  !YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+  !..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.
+  !....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.
+  !......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.
+  !........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+  `..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+    `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^'
+      `........::::::::::::::::;iof688888888888888888888b.     `
+        `......:::::::::;iof688888888888888888888888888888b.
+          `....:::;iof688888888888888888888888888888888899fT!
+            `..::!8888888888888888888888888888888899fT|!^"'
+              `' !!988888888888888888888888899fT|!^"'
+                  `!!8888888888888888899fT|!^"'
+                    `!988888888899fT|!^"'
+                      `!9899fT|!^"'
+                        `!^"'                                                                                                                                                             
+            </pre>
+            </div>
+        <div class="ascii-art">
+            <pre>                                                                                             
+                                                                        ,----..       ,----..       ,----..   ,-.----.    
+                .--.--.   ,-.----.       ,---,.    ,---,.,-.----.     /   /   \     /   /   \     /   /   \  \    /  \   
+               /  /    '. \    /  \    ,'  .' |  ,'  .' |\    /  \   /   .     :   /   .     :   /   .     : |   :    \  
+              |  :  /`. / ;   :    \ ,---.'   |,---.'   |;   :    \ .   /   ;.  \ .   /   ;.  \ .   /   ;.  \|   |  .\ : 
+              ;  |  |--`  |   | .\ : |   |   .'|   |   .'|   | .\ :.   ;   /  ` ;.   ;   /  ` ;.   ;   /  ` ;.   :  |: | 
+              |  :  ;_    .   : |: | :   :  |-,:   :  |-,.   : |: |;   |  ; \ ; |;   |  ; \ ; |;   |  ; \ ; ||   |   \ : 
+               \  \    `. |   |  \ : :   |  ;/|:   |  ;/||   |  \ :|   :  | ; | '|   :  | ; | '|   :  | ; | '|   : .   / 
+                `----.   \|   : .  / |   :   .'|   :   .'|   : .  /.   |  ' ' ' :.   |  ' ' ' :.   |  ' ' ' :;   | |`-'  
+                __ \  \  |;   | |  \ |   |  |-,|   |  |-,;   | |  \'   ;  \; /  |'   ;  \; /  |'   ;  \; /  ||   | ;     
+               /  /`--'  /|   | ;\  \'   :  ;/|'   :  ;/||   | ;\  \\   \  ',  /  \   \  ',  /  \   \  ',  / :   ' |     
+              '--'.     / :   ' | \.'|   |    \|   |    \:   ' | \.' ;   :    /    ;   :    /    ;   :    /  :   : :     
+                `--'---'  :   : :-'  |   :   .'|   :   .':   : :-'    \   \ .'      \   \ .'      \   \ .'   |   | :     
+                          |   |.'    |   | ,'  |   | ,'  |   |.'       `---`         `---`         `---`     `---'.|     
+                          `---'      `----'    `----'    `---'                                                 `---`     
+                                                                                                                         
+              
+            </pre>
+        </div>
     </div>
+    <div id="terminal">
+      <a id="before"></a>
+    </div>
+    <div id="command" onclick="$('texter').focus();">
+      <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                     moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" autofocus=""></textarea>
     <script src="script.js"></script>
-    <script src="animate.js"></script>
 </body>
 </html>
