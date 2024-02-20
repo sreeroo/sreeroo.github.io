@@ -35,6 +35,9 @@ To use the site, simply type a command into the command line interface and press
 
 If you have any questions or suggestions, feel free to email me at [sr10code@gmail.com](mailto:sr10code@gmail.com).
 
+## Inspiration
+Forrest Knight - Youtuber
+
 ## License
 
 This project is licensed under the MIT License.
