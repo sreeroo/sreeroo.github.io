@@ -12,6 +12,7 @@ setTimeout(function () {
     const commandInput = document.getElementById('command-input');
     const terminal = document.getElementById('terminal');
     const prompt = document.getElementById('prompt');
+    const commandLine = document.getElementsByClassName('command-line');
 
     // Function to handle user input
     function handleUserInput() {
@@ -61,7 +62,17 @@ setTimeout(function () {
     });
 
     // Delay generating the prompt until after the ASCII art banners are displayed
-    setTimeout(generatePrompt, 2000); // Adjust the delay as needed (in milliseconds)
+    setTimeout(generatePrompt, 2000);
+
+    // Set focus to the command input for user convenience
+    commandInput.focus();
+
+    // focus on the command input when the user clicks anywhere on the screen
+    document.addEventListener('click', function() {
+        commandInput.focus();
+    });
+
+
 };
 
 
@@ -93,8 +104,8 @@ setTimeout(function () {
   }
  
  banner = [
-    "+-+-+-+-+ +-+-+",
-    "|W|E|L|C|O|M|E|",
-    "+-+-+-+-+ +-+-+",
-    "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
-  ];
+    "<span class=\"heading\">---------------------------------------------</span>",
+    "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
+    "<span class=\"heading\">---------------------------------------------</span>",
+    "<span class=\"infos\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
+    ];
