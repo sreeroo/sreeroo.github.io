@@ -1,6 +1,6 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #000000; /* Black background color */
+    background-color: #001219; /* Black background color */
     color: #ffffff; /* Light text color */
     padding: 20px;
     margin: 0;
@@ -40,7 +40,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
 
 .heading {
     font-size: 1.5vw; /* Adjust as needed */
-    color: #00ff00; /* Green heading color */
+    color: #e63946; /* Green heading color */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add some space below the heading */
 }
@@ -68,9 +68,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     .command {
         font-size: 3vw; /* Adjust as needed */
     }
-    .command-line {
-        font-size: 3vw; /* Adjust as needed */
-    }
+   
     #prompt {
         font-size: 3vw; /* Adjust as needed */
     }
@@ -93,9 +91,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     .command {
         font-size: 3vw; /* Adjust as needed */
     }
-    .command-line {
-        font-size: 3vw; /* Adjust as needed */
-    }
+  
     #prompt {
         font-size: 3vw; /* Adjust as needed */
     }
@@ -117,9 +113,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     .command {
         font-size: 1.2vw; /* Adjust as needed */
     }
-    .command-line {
-        font-size: 1.2vw; /* Adjust as needed */
-    }
+   
     #prompt {
         font-size: 1.2vw; /* Adjust as needed */
     }
@@ -143,7 +137,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
   }
   .command {
     color: #00ff80;
-    text-shadow: 0 0 4px #fc8f00; 
+    text-shadow: 0 0 5px #00ff80;
   }
   .error {
     color: #B89076;
@@ -194,19 +188,6 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     }
   }
 
-  .command-line {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    color: white;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left;
-    caret-color: transparent;
-    line-height: 1.3em;
-}
-
 
 
 #input-container {
@@ -218,7 +199,11 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     display: none;
 }
 
-  #prompt {
+#prompt, #command-input {
+    display: flex; /* Align items on the same line */
+}
+
+#prompt {
     margin-top: 0px;
     animation: show 1s ease forwards;
     animation-delay: 1.2s;
@@ -227,21 +212,19 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     list-style: none;
     height: 20px;  
     line-height: 2.3em;
-  }
+}
 
 #command-input {
     display: inline-block;
     min-width: 20px;
     border: none;
     background: none;
-    color: inherit;
+    color: inherit; /* Remove black color */
     outline: none;
     font-size: inherit;
     font-family: 'Courier New', monospace;
     line-height: 2.2em;
     height: 20px;
-
-
 }
 
 #command-input:empty::before {

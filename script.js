@@ -43,7 +43,7 @@ setTimeout(function () {
         const newPrompt = document.createElement('span');
         newPrompt.id = 'prompt';
         prompt.style.display = 'inline-block';
-        newPrompt.textContent = '> ';
+        newPrompt.textContent = '';
 
 
         // Append the new prompt to the terminal
