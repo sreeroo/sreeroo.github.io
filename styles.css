@@ -4,6 +4,7 @@ body {
     color: #ffffff; /* Light text color */
     padding: 20px;
     margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 @keyframes blink {
@@ -26,16 +27,32 @@ body {
 }
 
 
-.ascii-art {
+.ascii-art-1 {
 width: 30%;
 color: white; /* White text color */
 font-size: 0.8vw; /* Adjust as needed */
 animation: fadeIn 2s ease-in-out;
 transition: color 0.5s ease-in-out; /* Add a transition effect */
+display: inline-block;
+text-align: left;
+max-width: 20%;
 }
 
-.ascii-art:hover {
+.ascii-art-2 {
+    color: white; /* White text color */
+    font-size: 1.5vw; /* Adjust as needed */
+    animation: fadeIn 2s ease-in-out;
+    transition: color 0.5s ease-in-out; /* Add a transition effect */
+    display: inline-block;
+    width: 1px;
+    text-align: left;
+}
+.ascii-art-1:hover {
     color: #00ff00; /* Change the color to red when the ASCII art is hovered over */
+}
+
+.ascii-art-2:hover {
+    color: #FF0000; /* Change the color to red when the ASCII art is hovered over */
 }
 
 .heading {
@@ -54,8 +71,12 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
-    .ascii-art {
-        font-size: 0.8vw; /* Adjust as needed */
+    .ascii-art-1 {
+        font-size: 0.5vw; /* Adjust as needed */
+    }
+
+    .ascii-art-2 {
+        font-size: 1vw; /* Adjust as needed */
     }
 
     .heading {
@@ -63,59 +84,69 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     }
 
     .infos {
-        font-size: 3vw; /* Adjust as needed */
+        font-size: 2.5vw; /* Adjust as needed */
     }
     .command {
-        font-size: 3vw; /* Adjust as needed */
+        font-size: 2.5vw; /* Adjust as needed */
     }
    
-    #prompt {
-        font-size: 3vw; /* Adjust as needed */
+    #input-container {
+        font-size: 2.5vw; /* Adjust as needed */
     }
     
 }
 
 /* For tablets: */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .ascii-art {
-        font-size: 0.8vw; /* Adjust as needed */
+    .ascii-art-1 {
+        font-size: 0.5vw; /* Adjust as needed */
     }
 
+    .ascii-art-2 {
+        font-size: 1vw; /* Adjust as needed */
+    }
+
+
     .heading {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2.5vw; /* Adjust as needed */
     }
 
     .infos {
-        font-size: 3vw; /* Adjust as needed */
+        font-size: 2vw; /* Adjust as needed */
     }
     .command {
-        font-size: 3vw; /* Adjust as needed */
+        font-size: 2vw; /* Adjust as needed */
     }
   
-    #prompt {
-        font-size: 3vw; /* Adjust as needed */
+    #input-container {
+        font-size: 2vw; /* Adjust as needed */
     }
 }
 
 /* For desktop and laptop screens: */
 @media only screen and (min-width: 1025px) {
-    .ascii-art {
-        font-size: 0.8vw; /* Adjust as needed */
+    .ascii-art-1 {
+        font-size: 0.6vw; /* Adjust as needed */
     }
+
+    .ascii-art-2 {
+        font-size: 1vw; /* Adjust as needed */
+    }
+
 
     .heading {
         font-size: 1.5vw; /* Adjust as needed */
     }
 
     .infos {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1vw; /* Adjust as needed */
     }
     .command {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.5vw; /* Adjust as needed */
     }
    
-    #prompt {
-        font-size: 1.2vw; /* Adjust as needed */
+    #input-container {
+        font-size: 1.5vw; /* Adjust as needed */
     }
 }
 
@@ -128,6 +159,7 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
   }
   .color1 {
     color: #00ff80;
+    font-size: 80%;
   }
     .color3 {
         color: orange;
@@ -199,18 +231,14 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     display: none;
 }
 
-#prompt, #command-input {
-    display: flex; /* Align items on the same line */
-}
 
 #prompt {
-    margin-top: 0px;
     animation: show 1s ease forwards;
     animation-delay: 1.2s;
     opacity: 100;
     color: #FF0000;
     list-style: none;
-    height: 20px;  
+    height: inherit;  
     line-height: 2.3em;
 }
 
@@ -221,10 +249,12 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     background: none;
     color: inherit; /* Remove black color */
     outline: none;
-    font-size: inherit;
+    font-size: 20px;
     font-family: 'Courier New', monospace;
     line-height: 2.2em;
-    height: 20px;
+    height: inherit;
+    caret-color: transparent;
+    animation: show 1s ease forwards;
 }
 
 #command-input:empty::before {
@@ -235,7 +265,8 @@ transition: color 0.5s ease-in-out; /* Add a transition effect */
     content: '';
     display: inline-block;
     width: 8px;
-    height: 25px;
+    height: 20px;
     background-color: #fff;
     animation: blink 1s infinite;
+    caret-color: transparent;
 }

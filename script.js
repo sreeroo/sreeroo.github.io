@@ -7,6 +7,13 @@ setTimeout(function () {
     loopLines(banner, "", 130);
   }, 100);
 
+  // set prompt display to inline after banner is done loading 
+
+  setPrompt = setTimeout(function () {
+    document.getElementById("prompt").style.display = "inline";
+  }, 1000);
+
+
 
   window.onload = function() {
     const commandInput = document.getElementById('command-input');
@@ -31,27 +38,9 @@ setTimeout(function () {
 
             // Clear the command input after processing
             commandInput.textContent = '';
-
-            // Generate a new prompt
-            generatePrompt();
         }
     }
 
-    // Function to generate a new prompt
-    function generatePrompt() {
-        // Create a new prompt element
-        const newPrompt = document.createElement('span');
-        newPrompt.id = 'prompt';
-        prompt.style.display = 'inline-block';
-        newPrompt.textContent = '';
-
-
-        // Append the new prompt to the terminal
-        terminal.appendChild(newPrompt);
-
-        // Set focus to the command input for user convenience
-        commandInput.focus();
-    }
 
     // Event listener for handling Enter key press
     commandInput.addEventListener('keydown', function(event) {
@@ -60,9 +49,6 @@ setTimeout(function () {
             handleUserInput();
         }
     });
-
-    // Delay generating the prompt until after the ASCII art banners are displayed
-    setTimeout(generatePrompt, 2000);
 
     // Set focus to the command input for user convenience
     commandInput.focus();
@@ -107,5 +93,5 @@ setTimeout(function () {
     "<span class=\"heading\">---------------------------------------------</span>",
     "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
     "<span class=\"heading\">---------------------------------------------</span>",
-    "<span class=\"infos\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
+    "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
     ];
