@@ -2,6 +2,8 @@ var before = document.getElementById("before");
 var liner = document.getElementById("liner");
 var command = document.getElementById("typer");
 var textarea = document.getElementById("texter");
+let commandHistory = [];
+let commandIndex = -1;
 
 setTimeout(function () {
     loopLines(banner, "", 130);
@@ -13,6 +15,13 @@ setTimeout(function () {
     document.getElementById("prompt").style.display = "inline";
   }, 1000);
 
+   
+ banner = [
+  "<span class=\"heading\">---------------------------------------------</span>",
+  "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
+  "<span class=\"heading\">---------------------------------------------</span>",
+  "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
+  ];
 
 
   window.onload = function() {
@@ -58,9 +67,92 @@ setTimeout(function () {
         commandInput.focus();
     });
 
-
 };
 
+function commander(cmd) {
+  switch (cmd.toLowerCase()) {
+    case "help":
+      loopLines(help, "color2 margin", 80);
+      break;
+    case "whois":
+      loopLines(whois, "color2 margin", 80);
+      break;
+    case "whoami":
+      loopLines(whoami, "color2 margin", 80);
+      break;
+    case "video":
+      addLine("Opening YouTube...", "color2", 80);
+      newTab(youtube);
+      break;
+    case "sudo":
+      addLine("Oh no, you're not admin...", "color2", 80);
+      setTimeout(function() {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+      }, 1000); 
+      break;
+    case "social":
+      loopLines(social, "color2 margin", 80);
+      break;
+    case "secret":
+      liner.classList.add("password");
+      pw = true;
+      break;
+    case "projects":
+      loopLines(projects, "color2 margin", 80);
+      break;
+    case "password":
+      addLine("<span class=\"inherit\"> Lol! You're joking, right? You\'re gonna have to try harder than that!😂</span>", "error", 100);
+      break;
+    case "history":
+      addLine("<br>", "", 0);
+      loopLines(commands, "color2", 80);
+      addLine("<br>", "command", 80 * commands.length + 50);
+      break;
+    case "email":
+      addLine('Opening mailto:<a href="mailto:forrest@fkcodes.com">forrest@fkcodes.com</a>...', "color2", 80);
+      newTab(email);
+      break;
+    case "clear":
+      setTimeout(function() {
+        terminal.innerHTML = '<a id="before"></a>';
+        before = document.getElementById("before");
+      }, 1);
+      break;
+    case "banner":
+      loopLines(banner, "", 80);
+      break;
+    // socials
+    case "youtube":
+      addLine("Opening YouTube...", "color2", 80);
+      newTab(youtube);
+      break;
+    case "twitter":
+      addLine("Opening Twitter...", "color2", 0);
+      newTab(twitter);
+      break;
+    case "linkedin":
+      addLine("Opening LinkedIn...", "color2", 0);
+      newTab(linkedin);
+      break;
+    case "instagram":
+      addLine("Opening Instagram...", "color2", 0);
+      newTab(instagram);
+      break;
+    case "github":
+      addLine("Opening GitHub...", "color2", 0);
+      newTab(github);
+      break;
+    default:
+      addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
+      break;
+  }
+}
+
+function newTab(link) {
+  setTimeout(function() {
+    window.open(link, "_blank");
+  }, 500);
+}
 
   function addLine(text, style, time) {
     var t = "";
@@ -88,10 +180,51 @@ setTimeout(function () {
       addLine(item, style, index * time);
     });
   }
- 
- banner = [
-    "<span class=\"heading\">---------------------------------------------</span>",
-    "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
-    "<span class=\"heading\">---------------------------------------------</span>",
-    "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
-    ];
+
+
+document.getElementById('command-input').addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowUp') {
+        // Prevent the cursor from moving to the start of the input
+        e.preventDefault();
+
+        // If there are no commands in the history, do nothing
+        if (!commandHistory.length) return;
+
+        // If we're not already at the oldest command in the history, go back one
+        if (commandIndex > 0) commandIndex--;
+
+        // Update the input value with the command from the history
+        this.textContent = commandHistory[commandIndex];
+    } else if (e.key === 'ArrowDown') {
+        // Prevent the cursor from moving to the end of the input
+        e.preventDefault();
+
+        // If we're at the newest command in the history, clear the input
+        if (commandIndex === -1 || commandIndex === commandHistory.length - 1) {
+            commandIndex = commandHistory.length;
+            this.textContent = '';
+        } else {
+            // Otherwise, go forward one command in the history
+            commandIndex++;
+            this.textContent = commandHistory[commandIndex];
+        }
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      let command = this.textContent;
+      commandHistory.push(command);
+      commandIndex = commandHistory.length;
+
+      // Process the command and get the output
+      let output = processCommand(command);
+
+      // Display the command and the output
+      displayCommandAndOutput(command, output);
+
+      // Create a new command input line
+      createNewCommandInput();
+
+      // Clear the current command input
+      this.textContent = '';
+  }
+});
+

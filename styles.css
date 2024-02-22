@@ -5,14 +5,16 @@ body {
     padding: 20px;
     margin: 0;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    width: 100%;
 }
-
-@keyframes blink {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
+::selection {
+    background-color: #74c69d; /* Green selection color */
+    color: #001219; /* Black text color */
 }
-
+::-moz-selection {
+    background-color: #519975; /* Green selection color */
+    color: #211830; /* Black text color */
+}
 
 .ascii-container {
     display: flex;
@@ -93,6 +95,12 @@ max-width: 20%;
     #input-container {
         font-size: 2.5vw; /* Adjust as needed */
     }
+    #command-input {
+        font-size: 2.5vw; /* Adjust as needed */
+    }
+    #command-input::after {
+        height: 2.5vw; /* Adjust as needed */
+    }
     
 }
 
@@ -121,6 +129,12 @@ max-width: 20%;
     #input-container {
         font-size: 2vw; /* Adjust as needed */
     }
+    #command-input {
+        font-size: 2vw; /* Adjust as needed */
+    }
+    #command-input::after {
+        height: 2vw; /* Adjust as needed */
+    }
 }
 
 /* For desktop and laptop screens: */
@@ -147,6 +161,12 @@ max-width: 20%;
    
     #input-container {
         font-size: 1.5vw; /* Adjust as needed */
+    } 
+    #command-input {
+        font-size: 1.5vw; /* Adjust as needed */
+    }
+    #command-input::after {
+        height: 1.5vw; /* Adjust as needed */
     }
 }
 
@@ -265,8 +285,16 @@ max-width: 20%;
     content: '';
     display: inline-block;
     width: 8px;
-    height: 20px;
     background-color: #fff;
-    animation: blink 1s infinite;
+    animation: blinker 1s infinite;
     caret-color: transparent;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
