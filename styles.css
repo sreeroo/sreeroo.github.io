@@ -7,8 +7,8 @@ body {
     width: fit-content;
     max-width: fit-content;
     user-select: text; /* Prevent text from being highlighted */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Add vertical scrolling */
+    overflow-y: auto; /* Add a scrollbar if the content is too long */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 ::selection {
     background-color: #74c69d; /* Green selection color */
@@ -111,7 +111,9 @@ max-width: 30%;
     p {
         font-size: 2.5vw; /* Adjust as needed */
     }
-    
+    body {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 }
 
 /* For tablets: */
