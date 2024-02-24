@@ -67,6 +67,7 @@ max-width: 30%;
     margin-bottom: 20px; /* Add some space below the heading */
     max-width: fit-content;
     width: fit-content;
+    white-space: nowrap;
 }
 
 .infos {
