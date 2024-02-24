@@ -65,7 +65,7 @@ setTimeout(function () {
     // Set focus to the command input for user convenience
     commandInput.focus();
 
-    // focus on the command input when the user clicks anywhere on the screen
+    // focus on the command input when the user clicks on the line with the command input 
     document.addEventListener('click', function() {
         commandInput.focus();
     });
@@ -104,7 +104,7 @@ function commander(cmd) {
       break;
     case "history":
       addLine("<br>", "", 0);
-      loopLines(commands, "color2", 80);
+      loopLines(commandHistory, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
     case "email":
@@ -132,6 +132,9 @@ function commander(cmd) {
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
       break;
   }
+
+  // Clear the command input after processing
+  document.getElementById('command-input').textContent = '';
 
 }
 

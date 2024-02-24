@@ -4,8 +4,10 @@ body {
     color: #ffffff; /* Light text color */
     padding: 20px;
     margin: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
     width: 100%;
+    user-select: text; /* Prevent text from being highlighted */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Add vertical scrolling */
 }
 ::selection {
     background-color: #74c69d; /* Green selection color */
@@ -90,6 +92,7 @@ max-width: 20%;
     }
     .command {
         font-size: 2.5vw; /* Adjust as needed */
+        
     }
    
     #input-container {
@@ -100,6 +103,9 @@ max-width: 20%;
     }
     #command-input::after {
         height: 2.5vw; /* Adjust as needed */
+    }
+    p {
+        font-size: 2.5vw; /* Adjust as needed */
     }
     
 }
@@ -135,38 +141,42 @@ max-width: 20%;
     #command-input::after {
         height: 2vw; /* Adjust as needed */
     }
+    p {
+        font-size: 2vw; /* Adjust as needed */
+    }
 }
-
 /* For desktop and laptop screens: */
 @media only screen and (min-width: 1025px) {
     .ascii-art-1 {
-        font-size: 0.6vw; /* Adjust as needed */
+        font-size: 0.5vw; /* Adjust as needed */
     }
 
     .ascii-art-2 {
-        font-size: 1vw; /* Adjust as needed */
+        font-size: 0.8vw; /* Adjust as needed */
     }
 
-
     .heading {
-        font-size: 1.5vw; /* Adjust as needed */
+        font-size: 1.2vw; /* Adjust as needed */
     }
 
     .infos {
-        font-size: 1vw; /* Adjust as needed */
+        font-size: 0.8vw; /* Adjust as needed */
     }
     .command {
-        font-size: 1.5vw; /* Adjust as needed */
+        font-size: 1.2vw; /* Adjust as needed */
     }
    
     #input-container {
-        font-size: 1.5vw; /* Adjust as needed */
+        font-size: 1.2vw; /* Adjust as needed */
     } 
     #command-input {
-        font-size: 1.5vw; /* Adjust as needed */
+        font-size: 1.2vw; /* Adjust as needed */
     }
     #command-input::after {
-        height: 1.5vw; /* Adjust as needed */
+        height: 1.2vw; /* Adjust as needed */
+    }
+    p {
+        font-size: 1.2vw; /* Adjust as needed */
     }
 }
 
@@ -220,10 +230,10 @@ max-width: 20%;
     line-height: 1.3em;
     margin: 0;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: pre-wrap;
     margin: 0;
     letter-spacing: 0.05em;
-    animation: typing 0.5s steps(30, end);
+    word-wrap: break-word;
   }
   .no-animation {
     animation: typing 0 steps(30, end);
