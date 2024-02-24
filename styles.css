@@ -4,7 +4,8 @@ body {
     color: #ffffff; /* Light text color */
     padding: 20px;
     margin: 0;
-    width: 100%;
+    width: fit-content;
+    max-width: fit-content;
     user-select: text; /* Prevent text from being highlighted */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Add vertical scrolling */
@@ -23,7 +24,7 @@ body {
     justify-content: flex-start; /* Center the ASCII arts horizontally */
     align-items: center; /* Center the ASCII arts vertically */
     flex-wrap: wrap; /* Wrap the ASCII arts if they don't fit on one line */
-}
+    width: fit-content;}
 
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -39,7 +40,7 @@ animation: fadeIn 2s ease-in-out;
 transition: color 0.5s ease-in-out; /* Add a transition effect */
 display: inline-block;
 text-align: left;
-max-width: 20%;
+max-width: 30%;
 }
 
 .ascii-art-2 {
