@@ -234,6 +234,7 @@ max-width: 20%;
     margin: 0;
     letter-spacing: 0.05em;
     word-wrap: break-word;
+    padding-right: 30px;
   }
   .no-animation {
     animation: typing 0 steps(30, end);
@@ -300,7 +301,7 @@ max-width: 20%;
     caret-color: transparent;
     color: white;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 }
 
 @keyframes blinker {
