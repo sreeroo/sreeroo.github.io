@@ -65,6 +65,8 @@ max-width: 30%;
     color: #e63946; /* Green heading color */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add some space below the heading */
+    max-width: fit-content;
+    width: fit-content;
 }
 
 .infos {
