@@ -42,11 +42,8 @@ setTimeout(function () {
             commandOutput.textContent = `${prompt.textContent} ${userInput}`;
             commandOutput.classList.add('command');
 
-            // Append the command output to the terminal
-            terminal.appendChild(commandOutput);
-
             // Process the user input
-            commander(userInput);
+            commander(userInput, commandOutput);
 
             // Clear the command input after processing
             commandInput.textContent = '';
@@ -72,7 +69,10 @@ setTimeout(function () {
 
 };
 
-function commander(cmd) {
+function commander(cmd, currentinput) {
+
+
+
   switch (cmd.toLowerCase()) {
     case "help":
       loopLines(help, "color2 margin", 80);
@@ -132,6 +132,9 @@ function commander(cmd) {
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
       break;
   }
+
+  // Add the current command to the terminal
+  document.getElementById('before').parentNode.insertBefore(currentinput, before);
 
   // Clear the command input after processing
   document.getElementById('command-input').textContent = '';
