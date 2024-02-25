@@ -2,7 +2,7 @@ var password = "sr10codes";
 var linkedin = "https://www.linkedin.com/in/sreeroop/";
 var email = 'mailto:sr10code@gmail.com';
 
-whoami = [
+whois = [
   "<br>",
   "Hey there, I'm Sreeroop!👋",
   "I'm a computer science student, a mechatronics engineer, and a lifelong learner.",

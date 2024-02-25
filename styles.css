@@ -191,7 +191,8 @@ max-width: 30%;
     color: #DCDCCC;
   }
   .color2 {
-    color: yellow;
+    color: #9bf6ff;
+    text-shadow: 0 0 5px #9bf6ff;
   }
   .color1 {
     color: #00ff80;
