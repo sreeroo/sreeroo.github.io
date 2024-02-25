@@ -52,7 +52,7 @@ skills = [
 
 help = [
   "<br>",
-  '<span class="command">whoami</span>         Who is Sreeroop?',
+  '<span class="command">whois</span>         Who is Sreeroop?',
   '<span class="command">education</span>      Where did Sreeroop study?',
     '<span class="command">skills</span>         What can Sreeroop do?',
     '<span class="command">projects</span>       What has Sreeroop done?',
