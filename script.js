@@ -21,6 +21,8 @@ setTimeout(function () {
   "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
   "<span class=\"heading\">---------------------------------------------</span>",
   "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
+  "<span class=\"infos\">use <span class=\"color1\">'SUDO'</span> only if you are an admin of this website</span>"
+
   ];
 
 
