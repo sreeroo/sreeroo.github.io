@@ -125,6 +125,9 @@ function commander(cmd, currentinput) {
       addLine("Opening LinkedIn...", "color2", 0);
       newTab(linkedin);
       break;
+    case "features":
+      loopLines(features, "color2 margin", 80);
+      break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
       break;
