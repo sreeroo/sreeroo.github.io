@@ -105,8 +105,8 @@ function commander(cmd, currentinput) {
       break;
     case "history":
       addLine("<br>", "", 0);
+      commandHistory.pop();
       loopLines(commandHistory, "color2", 80);
-      addLine("<br>", "command", 80 * commands.length + 50);
       break;
     case "email":
       addLine('Opening mailto:<a href="mailto:sr10codes@gmail.com">sr10codes@gmail.com</a>...', "color2", 80);
@@ -176,7 +176,11 @@ function newTab(link) {
 
 
 document.getElementById('command-input').addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowUp') {
+
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    // Prevent the default action
+    e.preventDefault();
+  } else if (e.key === 'ArrowUp') {
         // Prevent the cursor from moving to the start of the input
         e.preventDefault();
 
@@ -188,9 +192,20 @@ document.getElementById('command-input').addEventListener('keydown', function(e)
 
         // Update the input value with the command from the history
         this.textContent = commandHistory[commandIndex];
+        
+   // Move the cursor to the end of the input
+   let node = this.childNodes[0] ? this.childNodes[0] : this.appendChild(document.createTextNode(''));
+   const range = document.createRange();
+   const sel = window.getSelection();
+   range.setStart(node, this.textContent.length);
+   range.collapse(true);
+   sel.removeAllRanges();
+   sel.addRange(range);
     } else if (e.key === 'ArrowDown') {
         // Prevent the cursor from moving to the end of the input
         e.preventDefault();
+        if (!commandHistory.length) return;
+        if(this.textContent === '') return;
 
         // If we're at the newest command in the history, clear the input
         if (commandIndex === -1 || commandIndex === commandHistory.length - 1) {
@@ -200,12 +215,23 @@ document.getElementById('command-input').addEventListener('keydown', function(e)
             // Otherwise, go forward one command in the history
             commandIndex++;
             this.textContent = commandHistory[commandIndex];
+
+        // Move the cursor to the end of the input
+        let node = this.childNodes[0] ? this.childNodes[0] : this.appendChild(document.createTextNode(''));
+        const range = document.createRange();
+        const sel = window.getSelection();
+        range.setStart(node, this.textContent.length);
+        range.collapse(true);
+        sel.removeAllRanges();
+        sel.addRange(range);
         }
     } else if (e.key === 'Enter') {
       e.preventDefault();
-      let command = this.textContent;
-      commandHistory.push(command);
-      commandIndex = commandHistory.length;
+      if (this.textContent) {
+          commandHistory.push(this.textContent);
+          commandIndex = commandHistory.length;
+      }
   }
 });
+
 
