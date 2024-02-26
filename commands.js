@@ -62,7 +62,7 @@ help = [
     '<span class="command">banner</span>         Print the banner',
     '<span class="command">history</span>        Show command history',
     '<span class="command">sudo</span>           Only use if you\'re admin',
-    '<span class="command">features</span>       What are the features of this terminal?',
+    '<span class="command">features</span>       Features of this terminal?',
     "<br>"
 ];
 
