@@ -35,7 +35,7 @@ body {
 .ascii-art-1 {
 width: 30%;
 color: white; /* White text color */
-font-size: 0.8vw; /* Adjust as needed */
+font-size: 0.8vw; 
 animation: fadeIn 2s ease-in-out;
 transition: color 0.5s ease-in-out; /* Add a transition effect */
 display: inline-block;
@@ -45,7 +45,7 @@ max-width: 30%;
 
 .ascii-art-2 {
     color: white; /* White text color */
-    font-size: 1.5vw; /* Adjust as needed */
+    font-size: 1.5vw; 
     animation: fadeIn 2s ease-in-out;
     transition: color 0.5s ease-in-out; /* Add a transition effect */
     display: inline-block;
@@ -61,7 +61,7 @@ max-width: 30%;
 }
 
 .heading {
-    font-size: 1.5vw; /* Adjust as needed */
+    font-size: 1.5vw; 
     color: #e63946; /* Green heading color */
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add some space below the heading */
@@ -71,7 +71,7 @@ max-width: 30%;
 }
 
 .infos {
-    font-size: 1.2vw; /* Adjust as needed */
+    font-size: 1.2vw; 
     color: white; /* White text color */
     text-align: center; /* Center the text */
     margin-bottom: 20px; /* Add some space below the text */
@@ -80,36 +80,37 @@ max-width: 30%;
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
     .ascii-art-1 {
-        font-size: 0.5vw; /* Adjust as needed */
+        font-size: 0.5vw; 
     }
 
     .ascii-art-2 {
-        font-size: 1vw; /* Adjust as needed */
+        font-size: 1vw; 
     }
 
     .heading {
-        font-size: 3vw; /* Adjust as needed */
+        font-size: 3vw; 
     }
 
     .infos {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw; 
     }
     .command {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw; 
         
     }
    
     #input-container {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw; 
     }
     #command-input {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw; 
     }
     #command-input::after {
-        height: 2.5vw; /* Adjust as needed */
+        height: 2.5vw;
+        width: 1vw; 
     }
     p {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw; /
     }
     body {
         overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -119,70 +120,72 @@ max-width: 30%;
 /* For tablets: */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     .ascii-art-1 {
-        font-size: 0.5vw; /* Adjust as needed */
+        font-size: 0.5vw; 
     }
 
     .ascii-art-2 {
-        font-size: 1vw; /* Adjust as needed */
+        font-size: 1vw; 
     }
 
 
     .heading {
-        font-size: 2.5vw; /* Adjust as needed */
+        font-size: 2.5vw;
     }
 
     .infos {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2vw; 
     }
     .command {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2vw; 
     }
   
     #input-container {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2vw; 
     }
     #command-input {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2vw; 
     }
     #command-input::after {
-        height: 2vw; /* Adjust as needed */
+        height: 2vw;
+        width: 0.5vw; 
     }
     p {
-        font-size: 2vw; /* Adjust as needed */
+        font-size: 2vw; 
     }
 }
 /* For desktop and laptop screens: */
 @media only screen and (min-width: 1025px) {
     .ascii-art-1 {
-        font-size: 0.5vw; /* Adjust as needed */
+        font-size: 0.5vw; 
     }
 
     .ascii-art-2 {
-        font-size: 0.8vw; /* Adjust as needed */
+        font-size: 0.8vw; 
     }
 
     .heading {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.2vw;
     }
 
     .infos {
-        font-size: 1vw; /* Adjust as needed */
+        font-size: 1vw; 
     }
     .command {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.2vw; 
     }
    
     #input-container {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.2vw; 
     } 
     #command-input {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.2vw; 
     }
     #command-input::after {
-        height: 1.2vw; /* Adjust as needed */
+        height: 1.2vw; 
+        width: 0.5vw; 
     }
     p {
-        font-size: 1.2vw; /* Adjust as needed */
+        font-size: 1.2vw; 
     }
 }
 
@@ -192,7 +195,7 @@ max-width: 30%;
   }
   .color2 {
     color: #9bf6ff;
-    text-shadow: 0 0 5px #9bf6ff;
+    text-shadow: 0 0 15px #9bf6ff;
   }
   .color1 {
     color: #00ff80;
@@ -206,7 +209,7 @@ max-width: 30%;
   }
   .command {
     color: #00ff80;
-    text-shadow: 0 0 5px #00ff80;
+    text-shadow: 0 0 15px #00ff80;
   }
   .error {
     color: #B89076;
@@ -287,7 +290,6 @@ max-width: 30%;
     background: none;
     color: inherit; /* Remove black color */
     outline: none;
-    font-size: 20px;
     font-family: 'Courier New', monospace;
     line-height: 2.2em;
     height: inherit;
@@ -302,7 +304,6 @@ max-width: 30%;
 #command-input::after {
     content: '';
     display: inline-block;
-    width: 8px;
     background-color: #fff;
     animation: blinker 1s infinite;
     caret-color: transparent;
