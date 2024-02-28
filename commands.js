@@ -7,9 +7,9 @@ whois = [
   "Hey there, I'm Sreeroop!👋",
   "I'm a computer science student, a mechatronics engineer, and a lifelong learner.",
   "I am living in Munich, Germany at the moment, studying as a Dual Student at Munich University of Applied Sciences.",
-  "Before this, I lived in Singapore for four and a half years. I got my diploma in Mechatronics Engineering there.",
+  "Before this, I lived in Singapore for around four and a half years. I got my diploma in Mechatronics Engineering there.",
   "and I was deemed worthy of the Poly goes UAS Scholarship to study in Germany for my Bachelor's degree sponsored by Rohde & Schwarz and Economic Development Board (EDB) Singapore.",
-  "Should you wish to unravel the mysteries of my education and the marvels of my skills, simply cast the spell <span class=\"command\">education</span> or <span class=\"command\">skills</span>.",
+  "Should you wish to unravel the mysteries of my education and my skills, simply cast the spell <span class=\"command\">education</span> or <span class=\"command\">skills</span>.",
   "If you want to know more about my professional life, you can check out my LinkedIn profile. Here's the link: <a href=\"" + linkedin + "\" target=\"_blank\">" + linkedin + "</a>.",
   "<br>"
 ];
@@ -42,11 +42,12 @@ education = [
 
 skills = [
   "<br>",
-  "Sreeroop's had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz, Singapore and Rohde & Schwarz, Munich.",
+  "Sreeroop had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz, Singapore and Rohde & Schwarz, Munich, Germany.",
   "<br>",
-  "When it comes to building things, Sreeroop is proficient in Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he dedicates his free time to learning Rust and Go.",
+  "When it comes to building things, Sreeroop is proficient in Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Rust and Go at the moment.",
   "<br>",
-  "His time at R&S gave him opportunities to delve into Web Development, Scripting, ETL Pipelines and Big-Data Projects utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, and more.",
+  "Sree has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines.",
+  "utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, DevOps, and more.",
   "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating mircroservices.",
   "Another interesting project that Sreeroop worked on was the firmware development of a RF device(STM32 based) used in R&S during EMC testing. Sreeroop used C and RTOS for the porting/development of the firmware.",
   "He also possess expertise in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
@@ -80,6 +81,6 @@ features = [
   "If you want to see the banner again, type <span class=\"command\">'banner'</span>.",
   "If you want to see the command history, type <span class=\"command\">'history'</span>.",
   "Site is responsive, so you can use it on your phone or tablet.",
-  "I'm still working on this terminal. I'm planning to add more features like a file system, a chatbot, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
+  "I'm still working on this terminal. I'm planning to add more features like a perosonal AI chatbot, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
   "<br>"
 ];
