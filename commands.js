@@ -46,11 +46,10 @@ skills = [
   "<br>",
   "When it comes to building things, Sreeroop is proficient in Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Rust and Go at the moment.",
   "<br>",
-  "Sree has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines.",
-  "utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, DevOps, and more.",
-  "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating mircroservices.",
+  "Sree has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, DevOps, and more.",
+  "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating microservices.",
   "Another interesting project that Sreeroop worked on was the firmware development of a RF device(STM32 based) used in R&S during EMC testing. Sreeroop used C and RTOS for the porting/development of the firmware.",
-  "He also possess expertise in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
+  "He also possess knowledge in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
   "<br>",
   "For crafting web applications, you'll often find Sreeroop reaching for the trusty frameworks based on React, or Angular for frontend and Node.js or Spring Boot or .NET Core for Backend.",
   "Flutter is his go-to for building mobile applications for both Android and iOS due to its State Management and UI capabilities, and it is is a great way to build cross-platform applications.",
@@ -81,6 +80,6 @@ features = [
   "If you want to see the banner again, type <span class=\"command\">'banner'</span>.",
   "If you want to see the command history, type <span class=\"command\">'history'</span>.",
   "Site is responsive, so you can use it on your phone or tablet.",
-  "I'm still working on this terminal. I'm planning to add more features like a perosonal AI chatbot, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
+  "I'm still working on this terminal. I'm planning to add more features like a personal AI chatbot based on Retreival Augmented Generation or commonly known as RAG, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
   "<br>"
 ];

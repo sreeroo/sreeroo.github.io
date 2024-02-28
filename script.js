@@ -73,8 +73,6 @@ setTimeout(function () {
 
 function commander(cmd, currentinput) {
 
-
-
   switch (cmd.toLowerCase()) {
     case "help":
       loopLines(help, "color2 margin", 80);

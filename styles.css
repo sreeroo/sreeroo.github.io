@@ -4,8 +4,6 @@ body {
     color: #ffffff; /* Light text color */
     padding: 20px;
     margin: 0;
-    width: fit-content;
-    max-width: fit-content;
     user-select: text; /* Prevent text from being highlighted */
     overflow-y: auto; /* Add a scrollbar if the content is too long */
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -22,9 +20,11 @@ body {
 .ascii-container {
     display: flex;
     justify-content: flex-start; /* Center the ASCII arts horizontally */
-    align-items: center; /* Center the ASCII arts vertically */
-    flex-wrap: wrap; /* Wrap the ASCII arts if they don't fit on one line */
-    width: fit-content;}
+    align-items:center; /* Center the ASCII arts vertically */
+    width: auto; /* Full width */
+    max-width: 100%; /* Full width */
+    overflow-x: hidden;
+    }
 
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -33,14 +33,13 @@ body {
 
 
 .ascii-art-1 {
-width: 30%;
+width: 20%;
 color: white; /* White text color */
 font-size: 0.8vw; 
 animation: fadeIn 2s ease-in-out;
 transition: color 0.5s ease-in-out; /* Add a transition effect */
 display: inline-block;
 text-align: left;
-max-width: 30%;
 }
 
 .ascii-art-2 {
@@ -49,7 +48,6 @@ max-width: 30%;
     animation: fadeIn 2s ease-in-out;
     transition: color 0.5s ease-in-out; /* Add a transition effect */
     display: inline-block;
-    width: 1px;
     text-align: left;
 }
 .ascii-art-1:hover {
@@ -112,9 +110,6 @@ max-width: 30%;
     p {
         font-size: 2.5vw; /
     }
-    body {
-        overflow-x: hidden; /* Hide horizontal scrollbar */
-}
 }
 
 /* For tablets: */
