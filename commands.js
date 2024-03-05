@@ -36,7 +36,7 @@ education = [
   "<br>",
   "After graduation from Temasek Polytechnic, Sreeroop was indulged in a 10 Months Long Intensive German Language Course until B2 level at Goethe Institute, Singapore and worked at Rohde & Schwarz at the same time as part of the Poly goes UAS Scholarship Program.",
   "Passing the B2/C1 Level German Language Test was a prerequisite for his Bachelor's Degree in Germany.",
-  "Sreeroop completed his Secondary and Higher Secondary education in Science from Kendriya Vidyalaya, Kerala, India in 2018.",
+  "He completed his Secondary and Higher Secondary education in Science from Kendriya Vidyalaya, Kerala, India in 2018.",
   "<br>"
     ];
 
@@ -46,9 +46,9 @@ skills = [
   "<br>",
   "When it comes to building things, Sreeroop is proficient in Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Rust and Go at the moment.",
   "<br>",
-  "Sree has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, DevOps, and more.",
+  "He has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Blazor, Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, DevOps, and more.",
   "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating microservices.",
-  "Another interesting project that Sreeroop worked on was the firmware development of a RF device(STM32 based) used in R&S during EMC testing. Sreeroop used C and RTOS for the porting/development of the firmware.",
+  "Another interesting project that Sreeroop worked on was the firmware development of a RF device(STM32 based) used in R&S during EMC testing. He used C and RTOS for the porting/development of the firmware.",
   "He also possess knowledge in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
   "<br>",
   "For crafting web applications, you'll often find Sreeroop reaching for the trusty frameworks based on React, or Angular for frontend and Node.js or Spring Boot or .NET Core for Backend.",
