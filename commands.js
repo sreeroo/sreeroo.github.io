@@ -44,15 +44,15 @@ skills = [
   "<br>",
   "Sreeroop had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz, Singapore and Rohde & Schwarz, Munich, Germany.",
   "<br>",
-  "When it comes to building things, Sreeroop is proficient in Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Go at the moment.",
+  "When it comes to building things, Sreeroop has knowledge and experience in using the following programming languages: Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Go at the moment. Rust is another language that he's interested in learning in the near future",
   "<br>",
-  "He has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Angular, Node.js, .NET Core, PostgresSQL, Docker, Gitlab CI/CD, and more.",
+  "He has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Angular, Node.js, .NET Core, PostgresSQL, Docker, Dagster, Gitlab CI/CD, and more.",
   "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating microservices.",
-  "Another interesting project that Sreeroop worked on was the firmware development of a RF device(STM32 based) used in R&S during EMC testing. He used C and RTOS for the porting/development of the firmware.",
+  "As mentioned above, an interesting project that Sreeroop worked on was the firmware development of a RF device (STM32 based) used in R&S during EMC testing. He used C and RTOS for the porting/development of the firmware.",
   "He also possess knowledge in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
   "<br>",
-  "For crafting web applications, you'll often find Sreeroop reaching for the trusty frameworks based on React, or Angular for frontend and Node.js or Spring Boot or .NET Core for Backend.",
-  "Flutter is his go-to for building mobile applications for both Android and iOS due to its State Management and UI capabilities, and it is is a great way to build cross-platform applications.",
+  "For crafting web applications, you'll often find Sreeroop reaching for the trusty frameworks based on React like Next.js, Angular for frontend and Node.js or Spring Boot or .NET Core for the Backend.",
+  "Flutter is his go-to for building mobile applications for both Android and IOS due to its State Management and UI capabilities, and it is is a great way to build cross-platform applications.",
   "<br>"
     ];
 
