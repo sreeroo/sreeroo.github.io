@@ -44,7 +44,9 @@ skills = [
   "<br>",
   "Sreeroop had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz, Singapore and Rohde & Schwarz, Munich, Germany.",
   "<br>",
-  "When it comes to building things, Sreeroop has knowledge and experience in using the following programming languages: Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Go at the moment. Rust is another language that he's interested in learning in the near future",
+  "When it comes to building things, Sreeroop has knowledge and experience in : Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Go at the moment. Rust is another language he's planning to learn in the near future.",
+  "<br>",
+  "In today's AI era, Sreeroop emphasizes language agnosticism, the ability to pick up any language and code in it, for that to work one should be proficient in the underlying concepts and paradigms of programming languages.",
   "<br>",
   "He has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Angular, Node.js, .NET Core, PostgresSQL, Docker, Dagster, Gitlab CI/CD, and more.",
   "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating microservices.",
@@ -80,6 +82,6 @@ features = [
   "If you want to see the banner again, type <span class=\"command\">'banner'</span>.",
   "If you want to see the command history, type <span class=\"command\">'history'</span>.",
   "Site is responsive, so you can use it on your phone or tablet.",
-  "I'm still working on this terminal. I'm planning to add more features like a personal AI chatbot based on Retreival Augmented Generation or commonly known as RAG, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
+  "I'm still working on this terminal. I'm planning to add more features like a personal AI chatbot based on a LLM and Retreival Augmented Generation or commonly known as RAG, and a few more easter eggs. If you have any suggestions, feel free to email me at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a>.",
   "<br>"
 ];
