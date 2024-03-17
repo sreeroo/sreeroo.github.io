@@ -1,6 +1,6 @@
-var password = "sr10codes";
 var linkedin = "https://www.linkedin.com/in/sreeroop/";
 var email = 'mailto:sr10code@gmail.com';
+var password = "sree123";
 
 whois = [
   "<br>",
@@ -14,11 +14,6 @@ whois = [
   "<br>"
 ];
 
-secret = [
-  "<br>",
-  '<span class="command">sudo</span>           Only use if you\'re admin',
-  "<br>"
-];
 
 projects = [
   "<br>",

@@ -1,5 +1,4 @@
 var before = document.getElementById("before");
-var liner = document.getElementById("liner");
 var command = document.getElementById("typer");
 var textarea = document.getElementById("texter");
 let commandHistory = [];
@@ -22,8 +21,11 @@ setTimeout(function () {
   "<span class=\"heading\">---------------------------------------------</span>",
   "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
   "<span class=\"infos\">Use <span class=\"color1\">'sudo'</span> only if you are an admin of this website!!</span>",
-  "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">'Enter/Return'</span></span>"
+  "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">'Enter/Return'</span></span>",
+  "<span class=\"infos\">Inspiration from <a href=\"https://www.youtube.com/@fknight\" target=\"_blank\">Forrest Knight</a></span>"
+
   ];
+
 
 
   window.onload = function() {
@@ -232,5 +234,12 @@ document.getElementById('command-input').addEventListener('keydown', function(e)
       }
   }
 });
+
+console.log(
+  "%cTry to find out my 'secret' hidden inside the website!",
+  "color: #04ff00; font-weight: bold; font-size: 24px;"
+);
+
+
 
 

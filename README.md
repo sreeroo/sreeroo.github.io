@@ -13,8 +13,8 @@ This is a unique, interactive terminal-style website. It's designed to mimic the
 Here are some of the commands you can use on this site:
 
 - `whois`: Learn more about me
-- `whoami`: A philosophical question
-- `social`: Links to my social media profiles
+- `education` : Info about my educational background
+- `skills`: My skills and experience
 - `secret`: Find the password
 - `projects`: View my coding projects
 - `help`: List of all commands
