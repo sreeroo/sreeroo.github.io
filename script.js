@@ -94,10 +94,6 @@ function commander(cmd, currentinput) {
     case "skills":
       loopLines(skills, "color2 margin", 80);
       break;
-    case "secret":
-      liner.classList.add("password");
-      pw = true;
-      break;
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;

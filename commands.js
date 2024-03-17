@@ -1,6 +1,8 @@
 var linkedin = "https://www.linkedin.com/in/sreeroop/";
 var email = 'mailto:sr10code@gmail.com';
-var password = "sree123";
+
+// try decoding this array to get the password
+var password = [114, 113, 100, 100, 113, 110, 110, 111, 98, 110, 99, 100, 114].map(c => c + 2).map(c => c - 1);
 
 whois = [
   "<br>",
