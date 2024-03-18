@@ -94,6 +94,9 @@ function commander(cmd, currentinput) {
     case "skills":
       loopLines(skills, "color2 margin", 80);
       break;
+    case "experience":
+      loopLines(experience, "color2 margin", 80);
+      break;
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;

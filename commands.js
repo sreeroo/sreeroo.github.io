@@ -25,13 +25,13 @@ projects = [
 
 education = [
   "<br>",
-  "Sreeroop is currently immersed in his studies at Munich University of Applied Sciences, pursuing a Bachelor's degree in Computer Science. It's a journey that began in 2022 and will keep him busy until around 2026.",
+  "- Sreeroop is currently immersed in his studies at Munich University of Applied Sciences, pursuing a Bachelor's degree in Computer Science. It's a journey that began in 2022 and will keep him busy until around 2026.",
   "<br>",
-  "Sreeroop graduated from Temasek Polytechnic with a 'Diploma with Merit in Mechatronics Engineering', Singapore, where he also earned the distinction of being a Course Medallist ! Those were the years between 2018 and 2021.",
+  "- Sreeroop graduated from Temasek Polytechnic with a 'Diploma with Merit in Mechatronics Engineering', Singapore, where he also earned the distinction of being a Course Medallist ! Those were the years between 2018 and 2021.",
   "In his final year, he specialized in Semiconductor technology modules that focused on the IC fabrication process, cleanroom equipment and technology, and the underlying physics.",
   "His final year project 'Gesture Recognition Kit' won the merit award from School of Engineering, Temasek Polytechnic",
   "<br>",
-  "After graduation from Temasek Polytechnic, Sreeroop was indulged in a 10 Months Long Intensive German Language Course until B2 level at Goethe Institute, Singapore and worked at Rohde & Schwarz at the same time as part of the Poly goes UAS Scholarship Program.",
+  "- After graduation from Temasek Polytechnic, Sreeroop was indulged in a 10 Months Long Intensive German Language Course until B2 level at Goethe Institute, Singapore and worked at Rohde & Schwarz at the same time as part of the Poly goes UAS Scholarship Program.",
   "Passing the B2/C1 Level German Language Test was a prerequisite for his Bachelor's Degree in Germany.",
   "He completed his Secondary and Higher Secondary education in Science from Kendriya Vidyalaya, Kerala, India in 2018.",
   "<br>"
@@ -39,21 +39,37 @@ education = [
 
 skills = [
   "<br>",
-  "Sreeroop had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz, Singapore and Rohde & Schwarz, Munich, Germany.",
+  "- Programming languages: Java, Python, C, C#, C++, TypeScript, Dart, SQL and Go(learning).",
   "<br>",
-  "When it comes to building things, Sreeroop has knowledge and experience in : Java, Python, C, C++, C#, TypeScript, and SQL. Additionally, he is learning Go at the moment. Rust is another language he's planning to learn in the near future.",
+  "- Frameworks: .NET Core, Spring Boot, Angular, Flutter, Node.js, Blazor, React, Dagster, Selenium, Graphana, RTOS",
   "<br>",
-  "In today's AI era, Sreeroop emphasizes language agnosticism, the ability to pick up any language and code in it, for that to work one should be proficient in the underlying concepts and paradigms of programming languages.",
+  "- Database: PostgresSQL, MongoDB, MySQL.",
   "<br>",
-  "He has been involved in projects ranging from RF Firmware Development to Web Development and Test Automation. He has also been involved in the development of a Big Data Project and ETL Pipelines, utilising a variety of frameworks and technlogies like Angular, Node.js, .NET Core, PostgresSQL, Docker, Dagster, Gitlab CI/CD, and more.",
-  "He has hands on experience in developing APIs based on REST, GraphQL and OData using Spring Boot, .NET Core and Python. He's also familiar with Docker files and containers for creating microservices.",
-  "As mentioned above, an interesting project that Sreeroop worked on was the firmware development of a RF device (STM32 based) used in R&S during EMC testing. He used C and RTOS for the porting/development of the firmware.",
-  "He also possess knowledge in developing test automation scripts using Python for testing the RF devices and the web applications developed by R&S.",
+  "- APIs: REST, GraphQL, OData.",
   "<br>",
-  "For crafting web applications, you'll often find Sreeroop reaching for the trusty frameworks based on React like Next.js, Angular for frontend and Node.js or Spring Boot or .NET Core for the Backend.",
-  "Flutter is his go-to for building mobile applications for both Android and IOS due to its State Management and UI capabilities, and it is is a great way to build cross-platform applications.",
+  "- Tools: Git, Docker, Gitlab CI/CD, Jira, Confluence.",
+  "<br>",
+  "- Methodologies: Agile, Scrum, Kanban, TDD, BDD.",
+  "<br>",
+  "- Concepts: OOP, FP, Networks, Design Patterns, Data Structures, Algorithms, Microservices, Big Data, Test Automation, CI/CD",
+];
+
+experience = [
+  "<br>",
+  "- Sreeroop had the pleasure of diving into various projects across different Research and Development departments at both Rohde & Schwarz (R&S) Singapore and R&S Munich, Germany.",
+  "<br>",
+  "- Sreeroop is currently working as a Dual Student at Rohde & Schwarz GmbH & Co. KG, Munich, Germany.",
+  "He has worked in different divisions of the company, which include Broadcast and Media, Data Analytics, and Test and Measurement.",
+  "While working in these departments, he has been involved in the Software Development of a Big Data project with ETL pipelines based on microservices architecture that has a .NET Core Backend, Angular Frontend, and databases such as PostgreSQL and MongoDB. He has also been involved in API development using REST, GraphQL, and OData in Python and C#, test automation, and internal tool development.",
+  "<br>",
+  "- Sreeroop worked as an Intern and later as an Assistant Engineer at Rohde & Schwarz Asia Pte Ltd, Singapore.",
+  "He was involved in the development/porting of firmware in C for an RF device (STM32 based) used during EMC testing, development of a data analysis algorithm to analyze RF data, and in the modification of a RF power calibration algorithm.",
+  "<br>",
+  "- This is only a brief summary, for more details, drop me an email at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a> or message me on LinkedIn: <a href=\"" + linkedin + "\" target=\"_blank\">" + linkedin + "</a>.",  
   "<br>"
-    ];
+];
+
+
 
 
 help = [
@@ -61,7 +77,8 @@ help = [
     '<span class="command">whois</span>          Who is Sreeroop?',
     '<span class="command">education</span>      Where did Sreeroop study?',
     '<span class="command">skills</span>         What can Sreeroop do?',
-    '<span class="command">projects</span>       What has Sreeroop done?',
+    '<span class="command">experience</span>     What has Sreeroop done?',
+    '<span class="command">projects</span>       Projects from Sreeroop',
     '<span class="command">linkedin</span>       Sreeroop\'s LinkedIn profile',
     '<span class="command">email</span>          Email Sreeroop',
     '<span class="command">clear</span>          Clear the terminal',
