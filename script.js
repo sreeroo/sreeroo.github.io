@@ -109,7 +109,7 @@ function commander(cmd, currentinput) {
       loopLines(commandHistory, "color2", 80);
       break;
     case "email":
-      addLine('Opening mailto:<a href="mailto:sr10codes@gmail.com">sr10codes@gmail.com</a>...', "color2", 80);
+      addLine('Opening mailto:<a href="mailto:sr10code@gmail.com">sr10code@gmail.com</a>...', "color2", 80);
       newTab(email);
       break;
     case "clear":
