@@ -39,7 +39,7 @@ education = [
 
 skills = [
   "<br>",
-  "- Programming languages: Java, Python, C, C#, C++, TypeScript, Dart, SQL and Go(learning).",
+  "- Programming languages: Proficient in Java, Python and C. Has experience in using C#, C++, Dart, Typescript for different projects. Learning Haskell and Go at the moment.",
   "<br>",
   "- Frameworks: .NET Core, Spring Boot, Angular, Flutter, Node.js, Blazor, React, Dagster, Selenium, RTOS",
   "<br>",
