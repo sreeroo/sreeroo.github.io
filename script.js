@@ -19,9 +19,9 @@ setTimeout(function () {
   "<span class=\"heading\">---------------------------------------------</span>",
   "<span class=\"heading\">Welcome to my interactive portfolio Terminal!</span>",
   "<span class=\"heading\">---------------------------------------------</span>",
-  "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">'help'</span><span class=\"color2\">.</span>",
-  "<span class=\"infos\">Use <span class=\"color1\">'sudo'</span> only if you are an admin of this website!!</span>",
-  "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">'Enter/Return'</span></span>",
+  "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">help</span><span class=\"color2\">.</span>",
+  "<span class=\"infos\">Use <span class=\"color1\">sudo</span> only if you are an admin of this website!!</span>",
+  "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">Enter/Return</span></span>",
   "<span class=\"infos\">Inspiration from <a href=\"https://www.youtube.com/@fknight\" target=\"_blank\">Forrest Knight</a></span>"
 
   ];
