@@ -64,7 +64,7 @@ experience = [
   "- Sreeroop worked as an Intern and later as an Assistant Engineer at Rohde & Schwarz Asia Pte Ltd, Singapore from 2021 to 2022.",
   " -> During this time he was involved in the development/porting of firmware in C for an RF device (STM32 based) used during EMC testing, development of a data analysis algorithm to analyze RF data, and in the modification of a RF power calibration algorithm.",
   "<br>",
-  "- This is just a brief summary, for more details, contact Sree via his email at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a> or message me on LinkedIn: <a href=\"" + linkedin + "\" target=\"_blank\">" + linkedin + "</a>.",  
+  "- This is just a brief summary, for more details, contact Sree via his email at <a href=\"" + email + "\" target=\"_blank\">" + email + "</a> or message him on LinkedIn: <a href=\"" + linkedin + "\" target=\"_blank\">" + linkedin + "</a> or just type <span class=\"command\">email</span> or <span class=\"command\">linkedin</span> in this terminal.",  
   "<br>"
 ];
 
