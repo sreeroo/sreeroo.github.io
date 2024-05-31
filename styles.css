@@ -186,13 +186,15 @@ text-align: left;
 
 footer {
             text-align: center;
-            padding: 10px 0;
             background-color: #111;
             position: fixed;
             width: 100%;
             bottom: 0;
             box-shadow: 0 -2px 10px #0f0;
             left: 0px;
+            height: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
         }
 
