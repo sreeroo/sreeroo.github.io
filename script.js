@@ -22,17 +22,62 @@ setTimeout(function () {
   "<span class=\"infos\">For a list of available commands, type</span> <span class=\"color1\">help</span><span class=\"color2\">.</span>",
   "<span class=\"infos\">Use <span class=\"color1\">sudo</span> only if you are an admin of this website!!</span>",
   "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">Enter/Return</span></span>",
-  "<span class=\"infos\">Inspiration from <a href=\"https://www.youtube.com/@fknight\" target=\"_blank\">Forrest Knight</a></span>"
-
+  "<span class=\"infos\">Inspiration from <a href=\"https://www.youtube.com/@fknight\" target=\"_blank\">Forrest Knight</a></span>",
+  "<br>"
   ];
 
+  const quotes = [
+    "“The unexamined life is not worth living.” – Socrates",
+    "“He who has a why to live can bear almost any how.” – Friedrich Nietzsche",
+    "“Happiness depends upon ourselves.” – Aristotle",
+    "“I think, therefore I am.” – René Descartes",
+    "“The only true wisdom is in knowing you know nothing.” – Socrates",
+    "“Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.” – Buddha",
+    "“Life must be understood backward. But it must be lived forward.” – Søren Kierkegaard",
+    "“Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.” – Jean-Paul Sartre",
+    "“To live is to suffer, to survive is to find some meaning in the suffering.” – Friedrich Nietzsche",
+    "“It is not length of life, but depth of life.” – Ralph Waldo Emerson",
+    "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth. – Marcus Aurelius",
+    "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. – Ralph Waldo Emerson",
+    "The only thing that I know is that I know nothing. – Socrates",
+    "I am not a product of my circumstances. I am a product of my decisions. – Stephen Covey",
+    "One’s life has value so long as one attributes value to the life of others, by means of love, friendship, indignation, and compassion. – Simone de Beauvoir",
+    "Life is a shipwreck, but we must not forget to sing in the lifeboats. – Voltaire",
+    "The greatest wealth is to live content with little. – Plato",
+    "Out of life’s school of war: What does not kill me makes me stronger. – Friedrich Nietzsche",
+    "Happiness is not a state to arrive at, but a manner of traveling. – Margaret Lee Runbeck",
+    "Think lightly of yourself and deeply of the world. – Miyamoto Musashi",
+    "There is only one life and one love. Our divine duty is to give that love back to the universe. – Fyodor Dostoevsky",
+    "Patience is bitter, but its fruit is sweet. – Aristotle",
+    "The good life is one inspired by love and guided by knowledge. – Bertrand Russell",
+    "To be yourself is all that you can do. – Chris Cornell",
+    "We are what we repeatedly do. Excellence, then, is not an act, but a habit. – Aristotle",
+    "The mind is everything. What you think, you become. – Buddha",
+    "There is nothing either good or bad, but thinking makes it so. – William Shakespeare",
+    "If you want to improve, be content to be thought foolish and stupid. – Epictetus",
+    "Man is nothing else but what he makes of himself. – Jean-Paul Sartre",
+    "It is impossible for a man to learn what he thinks he already knows. – Epictetus",
+    "The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts. – Bertrand Russell",
+    "Those who know do not speak. Those who speak do not know.” – Lao Tzu",
+    "“The more you know, the more you realize you don't know.” – Aristotle",
+  ];
 
+    // Function to display a random quote
+    function showDailyQuote() {
+      randomInt = Math.floor(Math.random()*500) % quotes.length
+      document.getElementById("daily-quote").textContent = quotes[randomInt];
+    }
+    
 
   window.onload = function() {
     const commandInput = document.getElementById('command-input');
     const terminal = document.getElementById('terminal');
     const prompt = document.getElementById('prompt');
     const commandLine = document.getElementsByClassName('command-line');
+
+    showDailyQuote();
+
+
 
     // Function to handle user input
     function handleUserInput() {
@@ -72,6 +117,14 @@ setTimeout(function () {
     });
 
 };
+
+function ensureCommandInputVisible() {
+  setTimeout(function() {
+    window.scrollTo(0, document.body.scrollHeight);
+    document.getElementById('command-input').focus();
+  }, 100);
+}
+
 
 function commander(cmd, currentinput) {
 
@@ -133,11 +186,17 @@ function commander(cmd, currentinput) {
       break;
   }
 
+  currentinput.style.marginBottom = "10px";
+
+
   // Add the current command to the terminal
   document.getElementById('before').parentNode.insertBefore(currentinput, before);
 
   // Clear the command input after processing
   document.getElementById('command-input').textContent = '';
+
+  ensureCommandInputVisible();
+
 
 }
 
@@ -147,26 +206,37 @@ function newTab(link) {
   }, 500);
 }
 
-  function addLine(text, style, time) {
-    var t = "";
-    for (let i = 0; i < text.length; i++) {
-      if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
-        t += "&nbsp;&nbsp;";
-        i++;
-      } else {
-        t += text.charAt(i);
-      }
+
+function addLine(text, style, time) {
+  var t = "";
+  for (let i = 0; i < text.length; i++) {
+    if (text.charAt(i) == " " && text.charAt(i + 1) == " ") {
+      t += "&nbsp;&nbsp;";
+      i++;
+    } else {
+      t += text.charAt(i);
     }
-    setTimeout(function () {
-      var next = document.createElement("p");
-      next.innerHTML = t;
-      next.className = style;
-  
-      before.parentNode.insertBefore(next, before);
-  
-      window.scrollTo(0, document.body.offsetHeight);
-    }, time);
   }
+  setTimeout(function () {
+    var next = document.createElement("p");
+    next.innerHTML = t;
+    next.className = style;
+
+    before.parentNode.insertBefore(next, before);
+
+    // Scroll to the new position with a slight delay to ensure content is rendered
+    setTimeout(function() {
+      const inputContainer = document.getElementById('input-container');
+      if (inputContainer) {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+        document.getElementById('command-input').focus();
+      }
+    }, 10);
+  }, time);
+}
 
   function loopLines(name, style, time) {
     name.forEach(function (item, index) {

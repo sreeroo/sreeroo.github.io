@@ -1,82 +1,155 @@
+/* Base styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #001219; /* Black background color */
-    color: #ffffff; /* Light text color */
+    background-color: #001219;
+    color: #ffffff;
     padding: 20px;
     margin: 0;
-    user-select: text; /* Prevent text from being highlighted */
-    overflow-y: auto; /* Add a scrollbar if the content is too long */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-::selection {
-    background-color: #74c69d; /* Green selection color */
-    color: #001219; /* Black text color */
-}
-::-moz-selection {
-    background-color: #519975; /* Green selection color */
-    color: #211830; /* Black text color */
-}
-
-.ascii-container {
-    display: flex;
-    justify-content: flex-start; /* Center the ASCII arts horizontally */
-    align-items:center; /* Center the ASCII arts vertically */
-    width: auto; /* Full width */
-    max-width: 100%; /* Full width */
     overflow-x: hidden;
-    }
+    padding-bottom: 50px;
+  }
+  
+  ::selection {
+    background-color: #74c69d;
+    color: #001219;
+  }
+  
+  ::-moz-selection {
+    background-color: #519975;
+    color: #211830;
+  }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-
-.ascii-art-1 {
-width: 20%;
-color: white; /* White text color */
-font-size: 0.8vw; 
-animation: fadeIn 2s ease-in-out;
-transition: color 0.5s ease-in-out; /* Add a transition effect */
-display: inline-block;
-text-align: left;
-}
-
-.ascii-art-2 {
-    color: white; /* White text color */
-    font-size: 1.5vw; 
+  body::after {
+    content: '';
+    display: block;
+    height: 100px;  /* Extra space at bottom of page */
+    width: 100%;
+  }
+  
+  /* ASCII art container and elements */
+  .ascii-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .ascii-art-1 {
+    width: 20%;
+    color: white;
+    font-size: 0.8vw;
     animation: fadeIn 2s ease-in-out;
-    transition: color 0.5s ease-in-out; /* Add a transition effect */
+    transition: color 0.5s ease-in-out;
     display: inline-block;
     text-align: left;
-}
-.ascii-art-1:hover {
-    color: #00ff00; /* Change the color to red when the ASCII art is hovered over */
-}
-
-.ascii-art-2:hover {
-    color: #FF0000; /* Change the color to red when the ASCII art is hovered over */
-}
-
-.heading {
-    font-size: 1.5vw; 
-    color: #e63946; /* Green heading color */
-    text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  .ascii-art-2 {
+    color: white;
+    font-size: 1.5vw;
+    animation: fadeIn 2s ease-in-out;
+    transition: color 0.5s ease-in-out;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .ascii-art-1:hover {
+    color: #00ff00;
+  }
+  
+  .ascii-art-2:hover {
+    color: #FF0000;
+  }
+  
+  /* Text styles */
+  .heading {
+    font-size: 1.5vw;
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 20px;
     max-width: fit-content;
     width: fit-content;
     white-space: nowrap;
+  }
+  
+  .infos {
+    font-size: 1.2vw;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #daily-quote-container {
+    margin-top: 20px;
+    font-size: 1.2vw;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    border-top: 2px solid #74c69d;
+    padding-top: 10px;
 }
 
-.infos {
-    font-size: 1.2vw; 
-    color: white; /* White text color */
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some space below the text */
+#daily-quote {
+    margin: 10px 0;
+    font-size: 1.5vw;
 }
 
+  
+/* Terminal output container */
+#output-container {
+    width: 100%;
+    overflow-x: auto;     /* Allow horizontal scrolling if needed */
+    position: relative;   /* For proper positioning context */
+    min-height: 20px;     /* Ensure there's at least some space even when empty */
+}
+  
+  /* Terminal input styles */
+  #input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;  /* Position relative for better flow */
+    
+}
+  
+  #prompt {
+    color: #FF0000;
+    list-style: none;
+    line-height: 2.3em;
+    display: inline-block;
+    white-space: nowrap;  /* Prevent prompt from wrapping */
+  }
+  
+  #command-input {
+    display: inline-block;
+    min-width: 20px;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    line-height: 2.2em;
+    caret-color: transparent;
+    flex-grow: 1;          /* Allow input to take available space */
+  }
+  
+  #command-input:empty::before {
+    content: '\200B'; /* Zero-width space */
+  }
+  
+  #command-input::after {
+    content: '';
+    display: inline-block;
+    background-color: #fff;
+    animation: blinker 1s infinite;
+    position: relative;
+  }
 
-footer {
+
+  /* Footer */
+  footer {
     text-align: center;
     background-color: #111;
     position: fixed;
@@ -84,187 +157,72 @@ footer {
     bottom: 0;
     box-shadow: 0 -2px 10px #0f0;
     left: 0;
-    height: 40px; /* Increased height for better visibility */
+    height: 30px;
     padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1rem;
+    padding-bottom: 5px;
+    font-size: 0.9rem;
     color: #ffffff;
-}
-
-footer p {
+    z-index: 100;
+  }
+  
+  footer p {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
-}
-
-
-/* For mobile phones: */
-@media only screen and (max-width: 600px) {
-    .ascii-art-1 {
-        font-size: 0.5vw; 
-    }
-
-    .ascii-art-2 {
-        font-size: 1vw; 
-    }
-
-    .heading {
-        font-size: 3vw; 
-    }
-
-    .infos {
-        font-size: 2.5vw; 
-    }
-    .command {
-        font-size: 2.5vw; 
-        
-    }
-   
-    #input-container {
-        font-size: 2.5vw; 
-    }
-    #command-input {
-        font-size: 2.5vw; 
-    }
-    #command-input::after {
-        height: 2.5vw;
-        width: 1vw; 
-    }
-    p {
-        font-size: 2.5vw; /
-    }
-}
-
-/* For tablets: */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .ascii-art-1 {
-        font-size: 0.5vw; 
-    }
-
-    .ascii-art-2 {
-        font-size: 1vw; 
-    }
-
-
-    .heading {
-        font-size: 2.5vw;
-    }
-
-    .infos {
-        font-size: 2vw; 
-    }
-    .command {
-        font-size: 2vw; 
-    }
+  }
   
-    #input-container {
-        font-size: 2vw; 
-    }
-    #command-input {
-        font-size: 2vw; 
-    }
-    #command-input::after {
-        height: 2vw;
-        width: 0.5vw; 
-    }
-    p {
-        font-size: 2vw; 
-    }
-}
-/* For desktop and laptop screens: */
-@media only screen and (min-width: 1025px) {
-    .ascii-art-1 {
-        font-size: 0.5vw; 
-    }
-
-    .ascii-art-2 {
-        font-size: 0.8vw; 
-    }
-
-    .heading {
-        font-size: 1.2vw;
-    }
-
-    .infos {
-        font-size: 1vw; 
-    }
-    .command {
-        font-size: 1.2vw; 
-    }
-   
-    #input-container {
-        font-size: 1.2vw; 
-    } 
-    #command-input {
-        font-size: 1.2vw; 
-    }
-    #command-input::after {
-        height: 1.2vw; 
-        width: 0.5vw; 
-    }
-    p {
-        font-size: 1.2vw; 
-    }
-}
-
-footer {
-            text-align: center;
-            background-color: #111;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -2px 10px #0f0;
-            left: 0px;
-            height: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-        }
-
- /* Index, color2, command, error, and white styles */
- .index {
+  /* Text color styles */
+  .index {
     color: #DCDCCC;
   }
-  .color2 {
-    color: #9bf6ff;
-    text-shadow: 0 0 10px #9bf6ff;
-  }
+  
   .color1 {
     color: #00ff80;
     font-size: 80%;
   }
-    .color3 {
-        color: orange;
-    }
- .color4 {
+  
+  .color2 {
+    color: #9bf6ff;
+    text-shadow: 0 0 10px #9bf6ff;
+  }
+  
+  .color3 {
+    color: orange;
+  }
+  
+  .color4 {
     color: #FF0000;
   }
-  .command {
+  
+/* Command input styling */
+.command {
     color: #00ff80;
     text-shadow: 0 0 15px #00ff80;
   }
+  
   .error {
     color: #B89076;
   }
+  
   .white {
     color: #fff;
   }
   
-  /* Inherit, a, a:hover, and a:focus styles */
+  /* Link styles */
   .inherit,
   a {
     color: #e87575;
-  }
-  a {
     text-decoration: inherit;
   }
+  
   a:hover {
     background: #73ABAD;
     color: #211830;
   }
+  
   a:focus {
     outline: 0;
   }
-
+  
   /* Paragraph styles */
   p {
     display: block;
@@ -272,79 +230,51 @@ footer {
     margin: 0;
     overflow: hidden;
     white-space: pre-wrap;
-    margin: 0;
     letter-spacing: 0.05em;
     word-wrap: break-word;
     padding-right: 30px;
   }
-  .no-animation {
-    animation: typing 0 steps(30, end);
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
-  .margin {
-    margin-left: 0px;
+  
+  @keyframes blinker {
+    50% { opacity: 0; }
   }
+  
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+    from { width: 0; }
+    to { width: 100%; }
   }
-
-
-
-#input-container {
-    display: flex;
-    align-items: center;
-}
-
-#prompt {
-    display: none;
-}
-
-
-#prompt {
-    animation: show 1s ease forwards;
-    animation-delay: 1.2s;
-    opacity: 100;
-    color: #FF0000;
-    list-style: none;
-    height: inherit;  
-    line-height: 2.3em;
-}
-
-#command-input {
-    display: inline-block;
-    min-width: 20px;
-    border: none;
-    background: none;
-    color: inherit; /* Remove black color */
-    outline: none;
-    font-family: 'Courier New', monospace;
-    line-height: 2.2em;
-    height: inherit;
-    caret-color: transparent;
-    animation: show 1s ease forwards;
-}
-
-#command-input:empty::before {
-    content: '\200B'; /* Zero-width space to ensure div is never empty */
-}
-
-#command-input::after {
-    content: '';
-    display: inline-block;
-    background-color: #fff;
-    animation: blinker 1s infinite;
-    caret-color: transparent;
-    color: white;
-    position: relative;
-    overflow: auto;
-}
-
-@keyframes blinker {
-    50% {
-      opacity: 0;
-    }
+  
+  /* Responsive styles */
+  /* Mobile devices */
+  @media only screen and (max-width: 600px) {
+    .ascii-art-1 { font-size: 0.5vw; }
+    .ascii-art-2 { font-size: 1vw; }
+    .heading { font-size: 3vw; }
+    .infos, .command, #input-container, #command-input, p { font-size: 2.5vw; }
+    #command-input::after { height: 2.5vw; width: 1vw; }
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .ascii-art-1 { font-size: 0.5vw; }
+    .ascii-art-2 { font-size: 1vw; }
+    .heading { font-size: 2.5vw; }
+    .infos, .command, #input-container, #command-input, p { font-size: 2vw; }
+    #command-input::after { height: 2vw; width: 0.5vw; }
+  }
+  
+  /* Desktop and laptop screens */
+  @media only screen and (min-width: 1025px) {
+    .ascii-art-1 { font-size: 0.5vw; }
+    .ascii-art-2 { font-size: 0.8vw; }
+    .heading { font-size: 1.2vw; }
+    .infos { font-size: 1vw; }
+    .command, #input-container, #command-input, p { font-size: 1.2vw; }
+    #command-input::after { height: 1.2vw; width: 0.5vw; }
   }

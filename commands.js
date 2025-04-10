@@ -9,17 +9,17 @@ var password = [114, 113, 100, 100, 113, 110, 110, 111, 98, 110, 99, 100, 114].m
 whois = [
   "<br>",
   "Hi, I'm Sreeroop 👋",
-  "Computer Science student | Mechatronics Engineer",
+  "I'm a Computer Science student and Mechatronics Engineer, passionate about programming, computer networks and embedded systems.",
+  "Currently, I’m living in Munich, Germany, studying at Munich University of Applied Sciences.",
+  "I was honored to receive the Poly goes UAS Scholarship, which supports my studies in Germany and is sponsored by Rohde & Schwarz,",
+  "a company where I have had the opportunity to contribute to impactful projects.",
+  "Besides computer I love playing football, reading books, travelling around and watching movies", 
   "<br>",
-  "📍 Based in Munich, Germany",
-  "• Dual Student at Munich University of Applied Sciences",
-  "• Diploma in Mechatronics from Temasek Polytechnic, Singapore",
-  "• Recipient of Poly goes UAS Scholarship (Sponsored by Rohde & Schwarz and EDB Singapore)",
-  "<br>",
+  "For more details about my education and skills, check out the commands:",
   "📌 Commands: <span class=\"command\">education</span> | <span class=\"command\">skills</span> | <span class=\"command\">experience</span>",
   "📌 Connect: <a href=\"" + linkedin + "\" target=\"_blank\">LinkedIn</a> | <a href=\"" + email + "\">Email</a>"
+  ,"<br>"
 ];
-
 
 
 projects = [
@@ -33,10 +33,10 @@ education = [
   "<br>",
   "🎓 Education:",
   "• BSc Computer Science - Munich University of Applied Sciences (2022–2026)",
-  "• Diploma in Mechatronics Engineering - Temasek Polytechnic, Singapore (2018–2021)",
+  "• Graduated from Temasek Polytechnic, Singapore, with a Diploma in Mechatronics Engineering (2018–2021).",
   "   - Course Medallist | Merit Award for Gesture Recognition Kit project",
   "   - Specialized in semiconductor technology and IC fabrication",
-  "• German Language (B2/C1) - Goethe Institute, Singapore",
+  "• Completed a 10-month German Language Course (B2) at Goethe Institute, Singapore, before moving to Germany.",
   "<br>"
 ]
 
@@ -65,6 +65,7 @@ experience = [
   "  - Worked on data analysis algorithms for RF data and RF power calibration algorithms.",
   "<br>",
   "📩 Full details available on request: <a href=\"" + email + "\">Email</a> | <a href=\"" + linkedin + "\">LinkedIn</a>"
+  ,"<br>"
 ];
 
 
