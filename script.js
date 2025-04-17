@@ -23,8 +23,8 @@ setTimeout(function () {
   "<span class=\"infos\">Use <span class=\"color1\">sudo</span> only if you are an admin of this website!!</span>",
   "<span class=\"infos\">After typing in the commands, press <span class=\"color1\">Enter/Return</span></span>",
   "<span class=\"infos\">Inspiration from <a href=\"https://www.youtube.com/@fknight\" target=\"_blank\">Forrest Knight</a></span>",
-  "<br>"
-  ];
+  "<span class=\"infos\">!! Refresh to learn a new life lesson !!</span>",
+];
 
   const quotes = [
     "“The unexamined life is not worth living.” – Socrates",
@@ -62,7 +62,6 @@ setTimeout(function () {
     "“The more you know, the more you realize you don't know.” – Aristotle",
   ];
 
-    // Function to display a random quote
     function showDailyQuote() {
       randomInt = Math.floor(Math.random()*500) % quotes.length
       document.getElementById("daily-quote").textContent = quotes[randomInt];
